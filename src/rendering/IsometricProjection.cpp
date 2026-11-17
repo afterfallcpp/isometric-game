@@ -1,5 +1,7 @@
 #include "rpg/rendering/IsometricProjection.hpp"
 
+#include <stdexcept>
+
 namespace RPG::Rendering
 {
 
@@ -7,6 +9,10 @@ namespace RPG::Rendering
         : m_tileWidth(tileWidth),
           m_tileHeight(tileHeight)
     {
+        if (m_tileWidth <= 0.0f || m_tileHeight <= 0.0f)
+        {
+            throw std::invalid_argument("Tile width and height must be positive.");
+        }
     }
 
     ScreenPoint IsometricProjection::toScreen(WorldPoint world) const
@@ -18,6 +24,7 @@ namespace RPG::Rendering
 
     WorldPoint IsometricProjection::toWorld(ScreenPoint screen) const
     {
+
         return {
             screen.x / m_tileWidth + screen.y / m_tileHeight,
             -screen.x / m_tileWidth + screen.y / m_tileHeight};

@@ -1,4 +1,3 @@
-
 #include <gtest/gtest.h>
 
 #include "rpg/rendering/IsometricProjection.hpp"
@@ -60,6 +59,27 @@ namespace RPG::Rendering
 
         EXPECT_FLOAT_EQ(screen.x, -24.0f);
         EXPECT_FLOAT_EQ(screen.y, 60.0f);
+    }
+
+    TEST(IsometricProjectionTests, ThrowsWhenTileSizeXIsZero)
+    {
+        EXPECT_THROW(
+            IsometricProjection(0.0f, 32.0f),
+            std::invalid_argument);
+    }
+
+    TEST(IsometricProjectionTests, ThrowsWhenTileSizeYIsZero)
+    {
+        EXPECT_THROW(
+            IsometricProjection(64.0f, 0.0f),
+            std::invalid_argument);
+    }
+
+    TEST(IsometricProjectionTests, ThrowsWhenTileSizeIsNegative)
+    {
+        EXPECT_THROW(
+            IsometricProjection(-64.0f, 32.0f),
+            std::invalid_argument);
     }
 
 }
