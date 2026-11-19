@@ -51,6 +51,7 @@ add_executable(rpg-game
     src/ecs/EntityManager.cpp
     src/systems/MovementSystem.cpp
     src/rendering/IsometricProjection.cpp
+    src/world/IsometricGrid.cpp
 )
 
 target_include_directories(rpg-game

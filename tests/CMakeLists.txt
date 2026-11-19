@@ -8,9 +8,11 @@ add_executable(rpg-tests
     ecs/RegistryTests.cpp
     systems/MovementSystemTests.cpp
     rendering/IsometricProjectionTests.cpp
+    world/IsometricGridTests.cpp
     ../src/ecs/EntityManager.cpp
     ../src/systems/MovementSystem.cpp
     ../src/rendering/IsometricProjection.cpp
+    ../src/world/IsometricGrid.cpp
 )
 
 # --------------------------------------------------
