@@ -1,9 +1,11 @@
 
-#include "rpg/core/Game.hpp"
+#include "rpg/application/core/Game.hpp"
+
+using RPG::Application::Core::Game;
 
 int main()
 {
-    RPG::Core::Game game;
+    Game game;
 
     game.run();
 

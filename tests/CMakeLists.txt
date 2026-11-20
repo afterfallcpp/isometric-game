@@ -3,16 +3,16 @@
 # --------------------------------------------------
 
 add_executable(rpg-tests
-    ecs/EntityManagerTests.cpp
-    ecs/ComponentStorageTests.cpp
-    ecs/RegistryTests.cpp
-    systems/MovementSystemTests.cpp
-    rendering/IsometricProjectionTests.cpp
-    world/IsometricGridTests.cpp
-    ../src/ecs/EntityManager.cpp
-    ../src/systems/MovementSystem.cpp
-    ../src/rendering/IsometricProjection.cpp
-    ../src/world/IsometricGrid.cpp
+    domain/ecs/EntityManagerTests.cpp
+    domain/ecs/ComponentStorageTests.cpp
+    domain/ecs/RegistryTests.cpp
+    domain/rendering/IsometricProjectionTests.cpp
+    domain/world/IsometricGridTests.cpp
+    application/systems/MovementSystemTests.cpp
+    ../src/domain/ecs/EntityManager.cpp
+    ../src/domain/rendering/IsometricProjection.cpp
+    ../src/domain/world/IsometricGrid.cpp
+    ../src/application/systems/MovementSystem.cpp
 )
 
 # --------------------------------------------------

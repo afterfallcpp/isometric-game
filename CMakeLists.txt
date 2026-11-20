@@ -47,11 +47,11 @@ FetchContent_MakeAvailable(SFML)
 
 add_executable(rpg-game
     src/main.cpp
-    src/core/Game.cpp
-    src/ecs/EntityManager.cpp
-    src/systems/MovementSystem.cpp
-    src/rendering/IsometricProjection.cpp
-    src/world/IsometricGrid.cpp
+    src/application/core/Game.cpp
+    src/domain/ecs/EntityManager.cpp
+    src/domain/rendering/IsometricProjection.cpp
+    src/domain/world/IsometricGrid.cpp
+    src/application/systems/MovementSystem.cpp
 )
 
 target_include_directories(rpg-game
